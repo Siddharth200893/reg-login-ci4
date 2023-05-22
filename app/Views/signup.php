@@ -26,6 +26,9 @@
                         <input type="text" name="l_name" placeholder="Last Name" value="" class="form-control">
                     </div>
                     <div class="form-group mb-3">
+                        <input type="file" name="photo" placeholder="Profile Picture" value="" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
                         <input type="email" name="email" placeholder="email" class="form-control">
                     </div>
                     <div class="form-group mb-3">
@@ -37,9 +40,7 @@
                     <div class="form-group mb-3">
                         <input type="text" name="message" placeholder="Message" value="" class="form-control">
                     </div>
-                    <div class="form-group mb-3">
-                        <input type="file" name="photo" placeholder="Profile Picture" value="" class="form-control">
-                    </div>
+
                     <div class="d-grid">
                         <button type="submit" class="btn btn-dark">Signup</button>
                     </div>

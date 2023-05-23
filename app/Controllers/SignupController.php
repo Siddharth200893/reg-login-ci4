@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+use App\Models\UserDetailsModel;
 
 class SignupController extends Controller
 {
@@ -13,7 +14,6 @@ class SignupController extends Controller
         $data = [];
         echo view('signup', $data);
     }
-
     public function store()
     {
         helper(['form', 'url']);
@@ -25,18 +25,13 @@ class SignupController extends Controller
                 'mime_in[photo,image/jpg,image/jpeg,image/png]',
                 'max_size[photo,1024]',
             ],
-
             'email'      => 'required',
             'password'  => 'required',
             'phone'          => 'required',
             'message'         => 'required',
-
         ];
 
-
-
         if ($this->validate($rules)) {
-
             $userModel = new UserModel();
             $img = $this->request->getFile('photo');
             $img->move(WRITEPATH . '../public/uploads');
@@ -45,8 +40,6 @@ class SignupController extends Controller
             $data = [
                 'name'     => $this->request->getVar('name'),
                 'l_name'    => $this->request->getVar('l_name'),
-                // 'photo'    => $this->request->getVar('photo'),
-
                 'email' => $this->request->getVar('email'),
                 'password'     => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 'phone'    => $this->request->getVar('phone'),
@@ -54,9 +47,23 @@ class SignupController extends Controller
                 'file_name' =>  $img->getName(),
                 'file_type'  => $img->getClientMimeType(),
 
-
             ];
 
+
+            $userModel->insert([
+                'name'     => $this->request->getVar('name'),
+                'l_name'    => $this->request->getVar('l_name'),
+                'email' => $this->request->getVar('email'),
+                'password'     => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+            ]);
+
+            $userdetailsModel = new UserDetailsModel();
+            $userdetailsModel->insert([
+                'phone'    => $this->request->getVar('phone'),
+                'message' => $this->request->getVar('message'),
+                'file_name' =>  $img->getName(),
+                'file_type'  => $img->getClientMimeType(),
+            ]);
 
             $userModel->save($data);
             return redirect()->to('/signin');

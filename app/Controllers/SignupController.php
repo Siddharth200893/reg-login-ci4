@@ -35,7 +35,7 @@ class SignupController extends Controller
                 'l_name'    => $this->request->getVar('l_name'),
                 'photo'    => $this->request->getVar('photo'),
                 'email' => $this->request->getVar('email'),
-                'password'     => $this->request->getVar('password'),
+                'password'     => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 'phone'    => $this->request->getVar('phone'),
                 'message' => $this->request->getVar('message'),
 

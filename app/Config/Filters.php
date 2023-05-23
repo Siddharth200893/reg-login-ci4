@@ -15,13 +15,27 @@ class Filters extends BaseConfig
      * Configures aliases for Filter classes to
      * make reading things nicer and simpler.
      */
-    public array $aliases = [
-        'csrf'          => CSRF::class,
-        'toolbar'       => DebugToolbar::class,
-        'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
+    // public array $aliases = [
+    //     'csrf'          => CSRF::class,
+    //     'toolbar'       => DebugToolbar::class,
+    //     'honeypot'      => Honeypot::class,
+    //     'invalidchars'  => InvalidChars::class,
+    //     'secureheaders' => SecureHeaders::class,
+    // ];
+    /**
+     * Configures aliases for Filter classes to
+     * make reading things nicer and simpler.
+     *
+     */
+    public $aliases = [
+        'csrf'     => \CodeIgniter\Filters\CSRF::class,
+        'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
+        'honeypot' => \CodeIgniter\Filters\Honeypot::class,
+        'authGuard' => \App\Filters\AuthGuard::class,
     ];
+
+
+
 
     /**
      * List of filter aliases that are always

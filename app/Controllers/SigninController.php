@@ -23,8 +23,24 @@ class SigninController extends Controller
         $data = $userModel->where('email', $email)->first();
 
         if ($data) {
+
+
             $pass = $data['password'];
+
+            // print_r($data['password']);
+            // print_r($data['email']);
+            // echo $password;
+            // echo $email;
+            //die();
+
             $authenticatePassword = password_verify($password, $pass);
+
+            //
+            //echo $authenticatePassword;
+            //echo !$authenticatePassword ? 'false' : '';
+            //die();
+
+
             if ($authenticatePassword) {
                 $ses_data = [
                     'id' => $data['id'],

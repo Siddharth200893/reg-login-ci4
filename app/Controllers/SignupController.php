@@ -25,8 +25,7 @@ class SignupController extends Controller
             'password'  => 'required',
             'phone'          => 'required',
             'message'         => 'required',
-            'created_at'      => 'required',
-            'modified_at'  => 'required',
+
         ];
 
         if ($this->validate($rules)) {
@@ -39,8 +38,7 @@ class SignupController extends Controller
                 'password'     => $this->request->getVar('password'),
                 'phone'    => $this->request->getVar('phone'),
                 'message' => $this->request->getVar('message'),
-                'created_at'     => $this->request->getVar('created_at'),
-                'modified_at'    => $this->request->getVar('modified_at'),
+
 
             ];
             $userModel->save($data);

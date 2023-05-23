@@ -35,37 +35,25 @@ class SignupController extends Controller
             $userModel = new UserModel();
             $img = $this->request->getFile('photo');
             $img->move(WRITEPATH . '../public/uploads');
-            // print_r($img->getName());
-            // die();
-            $data = [
-                'name'     => $this->request->getVar('name'),
-                'l_name'    => $this->request->getVar('l_name'),
-                'email' => $this->request->getVar('email'),
-                'password'     => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-                'phone'    => $this->request->getVar('phone'),
-                'message' => $this->request->getVar('message'),
-                'file_name' =>  $img->getName(),
-                'file_type'  => $img->getClientMimeType(),
-
-            ];
-
 
             $userModel->insert([
                 'name'     => $this->request->getVar('name'),
                 'l_name'    => $this->request->getVar('l_name'),
                 'email' => $this->request->getVar('email'),
                 'password'     => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'phone'    => $this->request->getVar('phone'),
             ]);
 
             $userdetailsModel = new UserDetailsModel();
             $userdetailsModel->insert([
-                'phone'    => $this->request->getVar('phone'),
+
                 'message' => $this->request->getVar('message'),
                 'file_name' =>  $img->getName(),
                 'file_type'  => $img->getClientMimeType(),
             ]);
 
-            $userModel->save($data);
+
+            //$userModel->save($data);
             return redirect()->to('/signin');
         } else {
             $data['validation'] = $this->validator;

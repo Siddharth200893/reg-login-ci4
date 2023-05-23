@@ -18,7 +18,7 @@
                         <?= $validation->listErrors() ?>
                     </div>
                 <?php endif; ?>
-                <form action="<?php echo base_url(); ?>/SignupController/store" method="post">
+                <form action="<?php echo base_url(); ?>/SignupController/store" enctype="multipart/form-data" method="post">
                     <div class="form-group mb-3">
                         <input type="text" name="name" placeholder="Name" value="" class="form-control">
                     </div>
@@ -26,7 +26,7 @@
                         <input type="text" name="l_name" placeholder="Last Name" value="" class="form-control">
                     </div>
                     <div class="form-group mb-3">
-                        <input type="file" name="photo" placeholder="Profile Picture" value="" class="form-control">
+                        <input type="file" name="photo" placeholder="Profile Picture" enctype="multipart/form-data" value="" class="form-control">
                     </div>
                     <div class="form-group mb-3">
                         <input type="email" name="email" placeholder="email" class="form-control">

@@ -18,6 +18,8 @@ class UserModel extends Model
         'phone',
         'message',
         'created_at',
-        'modified_at'
+        'modified_at',
+        'file_name',
+        'file_type',
     ];
 }

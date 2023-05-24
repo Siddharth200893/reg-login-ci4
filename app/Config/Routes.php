@@ -42,6 +42,10 @@ $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::sto
 $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
 $routes->get('/signin', 'SigninController::index');
 $routes->get('/profile', 'ProfileController::index', ['filter' => 'authGuard']);
+$routes->get('/logout', 'SigninController::logout');
+$routes->get('/add-business', 'BusinessController::business');
+// $routes->get('/', 'UploadMultipleFiles::index');
+$routes->match(['get', 'post'], 'BusinessController/add_business', 'BusinessController::add_business');
 
 /*
  * --------------------------------------------------------------------

@@ -1,0 +1,397 @@
+CRITICAL - 2023-05-25 04:40:34 --> Undefined variable $item
+in APPPATH\Views\profile.php on line 104.
+ 1 APPPATH\Views\profile.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\ProfileController.php(16): view('profile')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 05:50:04 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\SigninController.php(87): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 05:57:43 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\SigninController.php(87): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 06:44:55 --> Undefined array key "logo"
+in APPPATH\Controllers\SigninController.php on line 51.
+ 1 APPPATH\Controllers\SigninController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logo"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 06:45:36 --> Too few arguments to function App\Controllers\SigninController::edit_profile(), 0 passed in C:\xampp\htdocs\reg-login\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\SigninController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 06:53:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\edit_profile.php on line 130.
+ 1 APPPATH\Views\edit_profile.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 130)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(80): view('edit_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 06:54:25 --> Trying to access array offset on value of type null
+in APPPATH\Views\edit_profile.php on line 132.
+ 1 APPPATH\Views\edit_profile.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 132)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(80): view('edit_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 06:56:02 --> Trying to access array offset on value of type null
+in APPPATH\Views\edit_profile.php on line 130.
+ 1 APPPATH\Views\edit_profile.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 130)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(80): view('edit_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 07:15:28 --> Trying to access array offset on value of type null
+in APPPATH\Views\edit_profile.php on line 130.
+ 1 APPPATH\Views\edit_profile.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 130)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(77): view('edit_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-25 07:20:32 --> mysqli_sql_exception: Unknown column 'registrationid' in 'where clause' in C:\xampp\htdocs\reg-login\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\reg-login\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `user_re...', 0)
+#1 C:\xampp\htdocs\reg-login\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user_re...')
+#2 C:\xampp\htdocs\reg-login\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user_re...')
+#3 C:\xampp\htdocs\reg-login\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `user_re...', Array, false)
+#4 C:\xampp\htdocs\reg-login\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\reg-login\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\reg-login\app\Controllers\SigninController.php(72): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\reg-login\system\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+#8 C:\xampp\htdocs\reg-login\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+#9 C:\xampp\htdocs\reg-login\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\reg-login\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-25 07:20:32 --> Unknown column 'registrationid' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `user_registration`.`id` as `registrationid`, `user_registration`.`name` as `name`, `user_registration`.`email` as `email`, `user_registration`.`phone` as `phone`, `user_details`.`file_name` as `filename`
+FROM `user_registration`
+JOIN `user_details` ON `user_details`.`id` = `user_registration`.`id`
+WHERE md5(registrationid) = \'$id\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user_registration`.`id` as `registrationid`, `user_registration`.`name` as `name`, `user_registration`.`email` as `email`, `user_registration`.`phone` as `phone`, `user_details`.`file_name` as `filename`
+FROM `user_registration`
+JOIN `user_details` ON `user_details`.`id` = `user_registration`.`id`
+WHERE md5(registrationid) = \'$id\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user_registration`.`id` as `registrationid`, `user_registration`.`name` as `name`, `user_registration`.`email` as `email`, `user_registration`.`phone` as `phone`, `user_details`.`file_name` as `filename`
+FROM `user_registration`
+JOIN `user_details` ON `user_details`.`id` = `user_registration`.`id`
+WHERE md5(registrationid) = \'$id\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `user_registration`.`id` as `registrationid`, `user_registration`.`name` as `name`, `user_registration`.`email` as `email`, `user_registration`.`phone` as `phone`, `user_details`.`file_name` as `filename`
+FROM `user_registration`
+JOIN `user_details` ON `user_details`.`id` = `user_registration`.`id`
+WHERE md5(registrationid) = :md5(registrationid):
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\SigninController.php(72): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-25 07:23:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)
+WHERE md5(user_registration.id) = '$id'
+ LIMIT 1' at line 3 in C:\xampp\htdocs\reg-login\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\reg-login\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `user_re...', 0)
+#1 C:\xampp\htdocs\reg-login\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user_re...')
+#2 C:\xampp\htdocs\reg-login\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user_re...')
+#3 C:\xampp\htdocs\reg-login\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `user_re...', Array, false)
+#4 C:\xampp\htdocs\reg-login\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\reg-login\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\reg-login\app\Controllers\SigninController.php(75): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\reg-login\system\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+#8 C:\xampp\htdocs\reg-login\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+#9 C:\xampp\htdocs\reg-login\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\reg-login\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-25 07:23:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id`)
+WHERE md5(user_registration.id) = '$id'
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `user_registration`.`id` as `registrationid`
+FROM `user_registration`
+JOIN `user_details` USING (`user_details`.`id`)
+WHERE md5(user_registration.id) = \'$id\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `user_registration`.`id` as `registrationid`
+FROM `user_registration`
+JOIN `user_details` USING (`user_details`.`id`)
+WHERE md5(user_registration.id) = \'$id\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `user_registration`.`id` as `registrationid`
+FROM `user_registration`
+JOIN `user_details` USING (`user_details`.`id`)
+WHERE md5(user_registration.id) = \'$id\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `user_registration`.`id` as `registrationid`
+FROM `user_registration`
+JOIN `user_details` USING (`user_details`.`id`)
+WHERE md5(user_registration.id) = :md5(user_registration.id):
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\SigninController.php(75): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 07:24:47 --> Trying to access array offset on value of type null
+in APPPATH\Views\edit_profile.php on line 130.
+ 1 APPPATH\Views\edit_profile.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 130)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(82): view('edit_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('$id')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 07:30:16 --> Undefined array key "name"
+in APPPATH\Views\edit_profile.php on line 131.
+ 1 APPPATH\Views\edit_profile.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 131)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(85): view('edit_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('c4ca4238a0b923820dcc509a6f75849b')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 07:31:27 --> Undefined array key "email"
+in APPPATH\Views\edit_profile.php on line 133.
+ 1 APPPATH\Views\edit_profile.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 133)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(85): view('edit_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('c4ca4238a0b923820dcc509a6f75849b')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 11:36:07 --> Undefined variable $userinfo
+in APPPATH\Views\profile.php on line 124.
+ 1 APPPATH\Views\profile.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userinfo', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(91): view('/profile')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 11:41:54 --> Undefined variable $userinfo
+in APPPATH\Views\profile.php on line 124.
+ 1 APPPATH\Views\profile.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userinfo', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\ProfileController.php(16): view('profile')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 11:45:04 --> Undefined variable $userdetails
+in APPPATH\Views\edit_profile.php on line 130.
+ 1 APPPATH\Views\edit_profile.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userdetails', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 130)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(94): view('/edit_profile')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 11:53:23 --> Undefined variable $userinfo
+in APPPATH\Views\profile.php on line 124.
+ 1 APPPATH\Views\profile.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userinfo', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(93): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 12:05:19 --> Undefined array key "reg_name"
+in APPPATH\Controllers\SigninController.php on line 47.
+ 1 APPPATH\Controllers\SigninController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reg_name"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 12:05:33 --> Undefined array key "filename"
+in APPPATH\Controllers\SigninController.php on line 50.
+ 1 APPPATH\Controllers\SigninController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "filename"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 12:06:02 --> Undefined array key "filename"
+in APPPATH\Controllers\SigninController.php on line 50.
+ 1 APPPATH\Controllers\SigninController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "filename"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 12:12:46 --> Undefined array key "id"
+in APPPATH\Controllers\SigninController.php on line 49.
+ 1 APPPATH\Controllers\SigninController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 12:16:52 --> Undefined variable $logoName
+in APPPATH\Views\profile.php on line 116.
+ 1 APPPATH\Views\profile.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logoName', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 116)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(100): view('/profile')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 12:17:41 --> Undefined variable $logoName
+in APPPATH\Views\profile.php on line 116.
+ 1 APPPATH\Views\profile.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logoName', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 116)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(57): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 12:46:40 --> Undefined variable $userdetails
+in APPPATH\Views\edit_profile.php on line 130.
+ 1 APPPATH\Views\edit_profile.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userdetails', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php', 130)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\edit_profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('edit_profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(81): view('edit_profile')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->edit_profile('c4ca4238a0b923820dcc509a6f75849b')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:05:58 --> Undefined array key "filename"
+in APPPATH\Controllers\SigninController.php on line 53.
+ 1 APPPATH\Controllers\SigninController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "filename"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:06:39 --> Undefined array key "filename"
+in APPPATH\Controllers\SigninController.php on line 53.
+ 1 APPPATH\Controllers\SigninController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "filename"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:06:48 --> Undefined variable $userdetails
+in APPPATH\Controllers\SigninController.php on line 53.
+ 1 APPPATH\Controllers\SigninController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userdetails', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:07:28 --> Undefined array key "registrationid"
+in APPPATH\Views\profile.php on line 123.
+ 1 APPPATH\Views\profile.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "registrationid"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 123)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(102): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:07:51 --> Undefined array key "registrationid"
+in APPPATH\Views\profile.php on line 123.
+ 1 APPPATH\Views\profile.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "registrationid"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 123)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(102): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:10:04 --> Undefined array key "id"
+in APPPATH\Views\profile.php on line 123.
+ 1 APPPATH\Views\profile.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 123)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(102): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:10:14 --> Undefined array key "registrationid"
+in APPPATH\Views\profile.php on line 123.
+ 1 APPPATH\Views\profile.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "registrationid"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 123)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(102): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:12:06 --> Undefined array key "filename"
+in APPPATH\Views\profile.php on line 123.
+ 1 APPPATH\Views\profile.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "filename"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php', 123)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\SigninController.php(102): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->update_profile()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-25 13:20:26 --> Undefined array key "registrationid"
+in APPPATH\Controllers\SigninController.php on line 49.
+ 1 APPPATH\Controllers\SigninController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "registrationid"', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\SigninController.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SigninController->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -46,6 +46,8 @@ $routes->get('/logout', 'SigninController::logout');
 $routes->get('/add-business', 'BusinessController::business');
 // $routes->get('/', 'UploadMultipleFiles::index');
 $routes->match(['get', 'post'], 'BusinessController/add_business', 'BusinessController::add_business');
+$routes->get('/edit-profile/(:alphanum)', 'SigninController::edit_profile/$1');
+$routes->post('update-profile', 'SigninController::update_profile');
 
 /*
  * --------------------------------------------------------------------

@@ -12,14 +12,13 @@ class UserModel extends Model
         'id',
         'name',
         'l_name',
-        'photo',
+
         'email',
         'password',
         'phone',
-        'message',
+
         'created_at',
         'modified_at',
-        'file_name',
-        'file_type',
+
     ];
 }

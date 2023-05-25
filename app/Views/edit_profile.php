@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #000
+            background-color: green
         }
 
         .card {
@@ -103,17 +103,19 @@
             padding: 8px 0;
             text-decoration: none;
         }
+
+        .d-flex.mt-2 {
+            justify-content: center;
+        }
     </style>
 </head>
 <?php $session = session();
-$id = $session->get('id');
-$logoname = $session->get('logo');
-$name = $session->get('name');
-$email = $session->get('email');
-$phone = $session->get('phone');
-// print_r($item);
+// $id = $session->get('id');
+// $name = $session->get('name');
+// $email = $session->get('email');
+// $phone = $session->get('phone');
+// print_r($userdetails);
 // die();
-$logoPath = base_url('public/logo/' . $logoname);
 ?>
 
 <body>
@@ -121,21 +123,28 @@ $logoPath = base_url('public/logo/' . $logoname);
         <div class="card p-4">
             <div class=" image d-flex flex-column justify-content-center align-items-center">
                 <button class="btn btn-secondary">
-                    <img src="<?= $logoPath ?>" height="100" width="100" />
+                    <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
                 </button>
-                <span class="name mt-3"><?= $name ?></span>
-                <span class="idd"><?= $email ?></span>
-                <div class="d-flex flex-row justify-content-center align-items-center gap-2">
-                    <span class="idd1"><?= $phone ?></span>
-                    <span><i class="fa fa-copy"></i></span>
-                </div>
-                <div class="d-flex flex-row justify-content-center align-items-center mt-3">
-                    <span class="number">1069 <span class="follow">Followers</span></span>
-                </div>
-                <div class=" d-flex mt-2">
-                    <!-- <button class="btn1 btn-dark">Edit Profile</button> -->
-                    <a class="btn1 btn-dark" href="<?php echo base_url('/edit-profile/' . md5($id)); ?>">Edit Profile</a>
-                </div>
+
+                <form name="profile_update_form" method="POST" action="<?php echo base_url(); ?>/update-profile">
+                    <input type="hidden" name="id" class="name mt-3" value="<?= $userdetails['registrationid'] ?>">
+                    <input type="text" name="name" class="name mt-3" value="<?= $userdetails['name'] ?>">
+                    <input type="email" name="email" class="idd" value="<?= $userdetails['email'] ?>">
+
+                    <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+                        <input type="text" name="phone" class="idd1" value="<?= $userdetails['phone'] ?>">
+
+                        <span><i class="fa fa-copy"></i></span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                        <span class="number">1069 <span class="follow">Followers</span></span>
+                    </div>
+                    <div class=" d-flex mt-2">
+                        <button type="submit" class="btn1 btn-dark">Update Profile</button>
+                        <!-- <a class="btn1 btn-dark" href="<? //php echo base_url('/update-profile'); 
+                                                            ?>">Update Profile</a> -->
+                    </div>
+                </form>
                 <div class="text mt-3">
                     <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/
                         Creative Director by Day #NFT minting@ with FND night.</span>

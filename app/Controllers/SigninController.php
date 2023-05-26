@@ -54,7 +54,7 @@ class SigninController extends Controller
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-                return view('profile');
+                return view('profile', $data);
             } else {
                 $session->setFlashdata('msg', 'Password is incorrect.');
                 return redirect()->to('/signin');
@@ -91,15 +91,29 @@ class SigninController extends Controller
             'name' => $this->request->getVar('name'),
             'email' => $this->request->getVar('email'),
             'phone' => $this->request->getVar('phone'),
+            'file_name' => $this->request->getVar('file_name'),
             'modified_at' => $myTime,
         ];
         // print_r($data);
         // die();
+        $picture = $this->request->getFile('file_name');
+        if ($picture->isValid() && !$picture->hasMoved()) {
+            $newName = $picture->getRandomName();
+            $picture->move(ROOTPATH . 'public/uploads', $newName);
+            $userDetailsModel = new UserDetailsModel();
+            $userDetailsModel->update($id, ['file_name' => $newName]);
+        }
+
         $updatemodel->update($id, $updatedata);
+        //below join used for only file name
+        $userdetails = $updatemodel->select('user_registration.id as registrationid, user_registration.name as name, user_registration.email as email, user_registration.phone as phone, user_details.file_name as filename')
+            ->join('user_details', 'user_details.id = user_registration.id')
+            ->where('user_registration.id', $id)
+            ->first();
 
-        $updata['userdetails'] = $updatedata;
+        $data['userdetails'] = $userdetails;
 
-        return view('/profile', $updata);
+        return view('profile', $data);
     }
     public function logout()
     {

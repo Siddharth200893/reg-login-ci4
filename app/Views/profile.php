@@ -107,13 +107,13 @@
 </head>
 <?php $session = session();
 $id = $session->get('id');
-$logoname = $session->get('logo');
+$picturename = $userdetails['filename'];
 $name = $session->get('name');
 $email = $session->get('email');
 $phone = $session->get('phone');
 // print_r($item);
 // die();
-$logoPath = base_url('public/logo/' . $logoname);
+$picturePath = base_url('public/uploads/' . $picturename);
 ?>
 
 <body>
@@ -121,10 +121,10 @@ $logoPath = base_url('public/logo/' . $logoname);
         <div class="card p-4">
             <div class=" image d-flex flex-column justify-content-center align-items-center">
                 <button class="btn btn-secondary">
-                    <img src="<?= $logoPath ?>" height="100" width="100" />
+                    <img src="<?= $picturePath ?>" height="100" width="100" />
                 </button>
-                <span class="name mt-3"><?= $name ?></span>
-                <span class="idd"><?= $email ?></span>
+                <span class="name mt-3"><?= $userdetails['name'] ?></span>
+                <span class="idd"><?= $userdetails['email'] ?></span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2">
                     <span class="idd1"><?= $phone ?></span>
                     <span><i class="fa fa-copy"></i></span>

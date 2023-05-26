@@ -107,15 +107,27 @@
         .d-flex.mt-2 {
             justify-content: center;
         }
+
+        .image form {
+            max-width: 300px;
+        }
+
+        .name-change {
+            border: none;
+            text-align: center;
+            width: 100%;
+        }
     </style>
 </head>
 <?php $session = session();
-// $id = $session->get('id');
-// $name = $session->get('name');
-// $email = $session->get('email');
-// $phone = $session->get('phone');
-// print_r($userdetails);
+$id = $session->get('id');
+$picturename = $userdetails['filename'];
+$name = $session->get('name');
+$email = $session->get('email');
+$phone = $session->get('phone');
+// print_r($item);
 // die();
+$picturePath = base_url('public/uploads/' . $picturename);
 ?>
 
 <body>
@@ -123,16 +135,17 @@
         <div class="card p-4">
             <div class=" image d-flex flex-column justify-content-center align-items-center">
                 <button class="btn btn-secondary">
-                    <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
+                    <img src="<?= $picturePath ?>" height="100" width="100" />
                 </button>
 
-                <form name="profile_update_form" method="POST" action="<?php echo base_url(); ?>/update-profile">
+                <form name="profile_update_form" method="POST" enctype="multipart/form-data" action="<?php echo base_url(); ?>update-profile">
                     <input type="hidden" name="id" class="name mt-3" value="<?= $userdetails['registrationid'] ?>">
-                    <input type="text" name="name" class="name mt-3" value="<?= $userdetails['name'] ?>">
-                    <input type="email" name="email" class="idd" value="<?= $userdetails['email'] ?>">
+                    <input type="file" name="file_name" class="name mt-3 name-change" value="">
+                    <input type="text" name="name" class="name mt-3 name-change" value="<?= $userdetails['name'] ?>">
+                    <input type="email" name="email" class="idd name-change" value="<?= $userdetails['email'] ?>">
 
                     <div class="d-flex flex-row justify-content-center align-items-center gap-2">
-                        <input type="text" name="phone" class="idd1" value="<?= $userdetails['phone'] ?>">
+                        <input type="text" name="phone" class="idd1 name-change" value="<?= $userdetails['phone'] ?>">
 
                         <span><i class="fa fa-copy"></i></span>
                     </div>

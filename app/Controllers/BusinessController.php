@@ -61,7 +61,23 @@ class BusinessController extends Controller
             $businessModel->insert($businessData);
 
             $msg = 'Data has been successfully uploaded';
-            return redirect()->to(base_url('/add-business'))->with('msg', $msg);
+            return view('business_details', ['business' => $businessData, 'msg' => $msg]);
+            //return redirect()->to(base_url('/add-business'))->with('msg', $msg);
         }
+    }
+
+    public function business_details()
+
+    {
+        helper(['form']);
+        return view('business_details');
+    }
+
+    public function edit_business_details($id)
+    {
+        $editmodel = new BusinessModel();
+
+        $data['business'] = $editmodel->where('md5(id)', $id)->first();
+        return view('edit_business_details', $data);
     }
 }

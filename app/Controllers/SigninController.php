@@ -14,7 +14,6 @@ class SigninController extends Controller
         helper(['form']);
         echo view('signin');
     }
-
     public function loginAuth()
     {
         $session = session();
@@ -25,33 +24,37 @@ class SigninController extends Controller
         if ($data) {
             $pass = $data['password'];
             $authenticatePassword = password_verify($password, $pass);
+            //
+            //echo $authenticatePassword;
+            //echo !$authenticatePassword ? 'false' : '';
+            //die();
+            //$this->session->set('logo_name', $img->getName());
+
+
+            $userprofile = $userModel->select('user_registration.id as registrationid, user_registration.name as name, user_registration.email as email, user_registration.phone as phone, user_details.file_name as filename')
+                ->join('user_details', 'user_details.id = user_registration.id')
+                ->where('user_registration.id', $data['id'])
+                ->first();
+
+            //print_r($userprofile);
+            $data['userdetails'] = $userprofile;
+            $userinfo = $userprofile;
+            // print '<pre>';
+            // print_r($userinfo['filename']);
+            // print '</pre>';
+            // die();
 
             if ($authenticatePassword) {
-                $userprofile = $userModel->select('user_registration.id as registrationid, user_registration.name as name, user_registration.email as email, user_registration.phone as phone, user_details.file_name as filename')
-                    ->join('user_details', 'user_details.id = user_registration.id')
-                    ->where('user_registration.id', $data['id'])
-                    ->first();
-
-                // $data['userdetails'] = $userprofile;
-                $userinfo = $userprofile;
-
                 $ses_data = [
                     'id' => $userinfo['registrationid'],
                     'name' => $userinfo['name'],
                     'email' => $userinfo['email'],
                     'phone' => $userinfo['phone'],
-                    'photo' => $userinfo['filename'],
-                    'isLoggedIn' => true
+                    'logo' => $userinfo['filename'],
+                    'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-<<<<<<< HEAD
                 return view('profile', $data);
-=======
-                $data['userdetails'] = $userprofile; // Add this line to pass the data to the view
-                return view('profile', $data);
-
-                return redirect()->to('/profile');
->>>>>>> 3a1679f6bbe9abe13788d65b9e1dcd819a807d69
             } else {
                 $session->setFlashdata('msg', 'Password is incorrect.');
                 return redirect()->to('/signin');
@@ -61,19 +64,22 @@ class SigninController extends Controller
             return redirect()->to('/signin');
         }
     }
-
     public function edit_profile($id)
     {
+        //echo $id;
+        // print_r($id);
+        // die();
         $editmodel = new UserModel();
         $userdata = $editmodel->select('user_registration.id as registrationid, user_registration.name as name, user_registration.email as email, user_registration.phone as phone, user_details.file_name as filename')
             ->join('user_details', 'user_details.id = user_registration.id')
             ->where('md5(user_registration.id)', $id)
             ->first();
-
+        // )->where('md5(package.id)', $id)->first();
+        // print_r($userdata);
+        // die();
         $data['userdetails'] = $userdata;
         return view('edit_profile', $data);
     }
-
     public function update_profile()
     {
         $session = session();
@@ -88,7 +94,6 @@ class SigninController extends Controller
             'file_name' => $this->request->getVar('file_name'),
             'modified_at' => $myTime,
         ];
-<<<<<<< HEAD
         // print_r($data);
         // die();
         $picture = $this->request->getFile('file_name');
@@ -98,8 +103,6 @@ class SigninController extends Controller
             $userDetailsModel = new UserDetailsModel();
             $userDetailsModel->update($id, ['file_name' => $newName]);
         }
-=======
->>>>>>> 3a1679f6bbe9abe13788d65b9e1dcd819a807d69
 
         $updatemodel->update($id, $updatedata);
         //below join used for only file name
@@ -108,27 +111,14 @@ class SigninController extends Controller
             ->where('user_registration.id', $id)
             ->first();
 
-<<<<<<< HEAD
         $data['userdetails'] = $userdetails;
 
-=======
-        // Fetch the updated user details
-        $userdetails = $updatemodel->select('user_registration.id as registrationid, user_registration.name as name, user_registration.email as email, user_registration.phone as phone, user_details.file_name as filename')
-            ->join('user_details', 'user_details.id = user_registration.id')
-            ->where('user_registration.id', $id)
-            ->first();
-
-        $data['userdetails'] = $userdetails;
-
->>>>>>> 3a1679f6bbe9abe13788d65b9e1dcd819a807d69
         return view('profile', $data);
     }
-
-
     public function logout()
     {
-        $session = session();
-        $session->destroy();
+        session();
+        session_destroy();
         return redirect()->to('/signin');
     }
 }

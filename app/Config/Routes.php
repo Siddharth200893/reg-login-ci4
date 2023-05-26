@@ -48,7 +48,10 @@ $routes->get('/add-business', 'BusinessController::business');
 $routes->match(['get', 'post'], 'BusinessController/add_business', 'BusinessController::add_business');
 $routes->get('/edit-profile/(:alphanum)', 'SigninController::edit_profile/$1');
 $routes->post('update-profile', 'SigninController::update_profile');
-$routes->get('/edit-business/(:alphanum)', 'BusinessController::edit_business_details/$1');
+$routes->get('view-business/(:alphanum)', 'BusinessController::business_list/$1');
+$routes->get('view_business_details/(:alphanum)', 'BusinessController::view_business_details/$1');
+$routes->get('/edit-business-details/(:alphanum)', 'BusinessController::edit_business_details/$1');
+$routes->post('update-business/(:alphanum)', 'BusinessController::update_business');
 
 /*
  * --------------------------------------------------------------------

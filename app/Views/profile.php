@@ -107,50 +107,38 @@
 </head>
 <?php $session = session();
 $id = $session->get('id');
-<<<<<<< HEAD
 $picturename = $userdetails['filename'];
-=======
-$picture = $userdetails['filename'];
->>>>>>> 3a1679f6bbe9abe13788d65b9e1dcd819a807d69
 $name = $session->get('name');
 $email = $session->get('email');
 $phone = $session->get('phone');
 // print_r($item);
 // die();
-<<<<<<< HEAD
 $picturePath = base_url('public/uploads/' . $picturename);
-=======
-$picturepath = base_url('public/uploads/' . $picture);
-// print_r($logoPath);
-// die();
->>>>>>> 3a1679f6bbe9abe13788d65b9e1dcd819a807d69
 ?>
 
 <body>
     <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
         <div class="card p-4">
-            <div class="image d-flex flex-column justify-content-center align-items-center">
+            <div class=" image d-flex flex-column justify-content-center align-items-center">
                 <button class="btn btn-secondary">
-<<<<<<< HEAD
                     <img src="<?= $picturePath ?>" height="100" width="100" />
-=======
-                    <img src="<?= $picturepath ?>" height="100" width="100" alt="Profile Picture">
->>>>>>> 3a1679f6bbe9abe13788d65b9e1dcd819a807d69
                 </button>
                 <span class="name mt-3"><?= $userdetails['name'] ?></span>
                 <span class="idd"><?= $userdetails['email'] ?></span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2">
-                    <span class="idd1"><?= $userdetails['phone'] ?></span>
+                    <span class="idd1"><?= $phone ?></span>
                     <span><i class="fa fa-copy"></i></span>
                 </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3">
                     <span class="number">1069 <span class="follow">Followers</span></span>
                 </div>
-                <div class="d-flex mt-2">
+                <div class=" d-flex mt-2">
+                    <!-- <button class="btn1 btn-dark">Edit Profile</button> -->
                     <a class="btn1 btn-dark" href="<?php echo base_url('/edit-profile/' . md5($id)); ?>">Edit Profile</a>
                 </div>
                 <div class="text mt-3">
-                    <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/Creative Director by Day #NFT minting@ with FND night.</span>
+                    <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/
+                        Creative Director by Day #NFT minting@ with FND night.</span>
                 </div>
                 <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">
                     <span><i class="fa fa-twitter"></i></span>
@@ -158,8 +146,8 @@ $picturepath = base_url('public/uploads/' . $picture);
                     <span><i class="fa fa-instagram"></i></span>
                     <span><i class="fa fa-linkedin"></i></span>
                 </div>
-                <div class="px-2 rounded mt-4 date">
-                    <span class="join">Joined May, 2021</span>
+                <div class=" px-2 rounded mt-4 date ">
+                    <span class="join">Joined May,2021</span>
                 </div>
             </div>
         </div>
@@ -167,7 +155,6 @@ $picturepath = base_url('public/uploads/' . $picture);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
-
 
 </html>
 
@@ -181,6 +168,7 @@ $picturepath = base_url('public/uploads/' . $picture);
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="<?php echo base_url('/add-business'); ?>">Add Business</a>
+                    <a class="navbar-brand" href="<?php echo base_url('/view-business/' . md5($id)); ?>">View Business</a>
                     <div class="d-flex">
                         <ul class="navbar-nav">
                             <li class="nav-item">

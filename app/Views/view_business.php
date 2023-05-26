@@ -35,9 +35,8 @@
                             <td><?php echo $business['email']; ?></td>
                             <td><img src="<?php echo base_url('public/logo/' . $business['l_img_name']); ?>" alt="Business Logo" style="width: 50px; height: 50px;"></td>
                             <td>
-                                <a href="<?php echo base_url('BusinessController/view_business/' . $business['id']); ?>" class="btn btn-primary">View Details</a>
-                                <a href="<?php echo base_url('BusinessController/show_gallery/' . $business['id']); ?>" class="btn btn-secondary">Show Gallery</a>
-                                <a href="<?php echo base_url('BusinessController/edit_business/' . $business['id']); ?>" class="btn btn-warning">Edit</a>
+                                <a href="<?php echo base_url('view_business_details/' . md5($business['id'])); ?>" class="btn btn-primary">View Details</a>
+
                             </td>
                         </tr>
                     </tbody>

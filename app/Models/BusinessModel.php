@@ -11,6 +11,7 @@ class BusinessModel extends Model
     protected $allowedFields = [
         'id',
         'name',
+        'user_id',
         'address',
         'phone',
         'email',

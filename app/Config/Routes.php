@@ -43,7 +43,7 @@ $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController:
 $routes->get('/signin', 'SigninController::index');
 $routes->get('/profile', 'ProfileController::index', ['filter' => 'authGuard']);
 $routes->get('/logout', 'SigninController::logout');
-$routes->get('/add-business', 'BusinessController::business');
+$routes->get('/business-form', 'BusinessController::business_form');
 // $routes->get('/', 'UploadMultipleFiles::index');
 $routes->match(['get', 'post'], 'BusinessController/add_business', 'BusinessController::add_business');
 $routes->get('/edit-profile/(:alphanum)', 'SigninController::edit_profile/$1');
@@ -51,7 +51,7 @@ $routes->post('update-profile', 'SigninController::update_profile');
 $routes->get('view-business/(:alphanum)', 'BusinessController::business_list/$1');
 $routes->get('view_business_details/(:alphanum)', 'BusinessController::view_business_details/$1');
 $routes->get('/edit-business-details/(:alphanum)', 'BusinessController::edit_business_details/$1');
-$routes->post('update-business/(:alphanum)', 'BusinessController::update_business');
+$routes->post('update-business/(:alphanum)', 'BusinessController::update_business/$1');
 
 /*
  * --------------------------------------------------------------------

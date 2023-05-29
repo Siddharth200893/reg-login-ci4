@@ -14,6 +14,12 @@
 </head>
 
 <body>
+
+    <?php $session = session();
+    $id = $session->get('id');
+    // print_r($id);
+    // die(); 
+    ?>
     <div class="container mt-5">
         <div class="row justify-content-md-center">
             <div class="col-5">
@@ -24,6 +30,8 @@
                     </div>
                 <?php endif ?>
                 <form action="<?php echo base_url(); ?>/BusinessController/add_business" enctype="multipart/form-data" method="post">
+                    <input type="hidden" name="user_id" placeholder="" value="<?= $id ?>" class="form-control">
+
                     <div class="form-group mb-3">
                         <label for="name">Name</label><br>
                         <input type="text" name="name" placeholder="Name" value="" class="form-control">

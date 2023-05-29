@@ -20,7 +20,12 @@
         <div class="row justify-content-md-center">
             <div class="col-5">
                 <h2>Edit Business Details</h2>
-                <form action="<?php echo base_url('/update_business/' . $business['id']); ?>" enctype="multipart/form-data" method="post">
+                <form action="<?php echo base_url('/update-business/' . md5($business['id'])); ?>" enctype="multipart/form-data" method="post">
+
+
+
+                    <input type="hidden" name="id" placeholder="" value="<?php echo $business['name']; ?>" class="form-control">
+
                     <div class="form-group mb-3">
                         <label for="name">Name</label>
                         <input type="text" name="name" placeholder="Name" value="<?php echo $business['name']; ?>" class="form-control">

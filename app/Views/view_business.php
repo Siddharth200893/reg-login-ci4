@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <?php $session = session();
+    $id = $session->get('id'); ?>
     <div class="container mt-5">
         <div class="row justify-content-md-center">
             <div class="col-12">
@@ -28,17 +30,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><?php echo $business['name']; ?></td>
-                            <td><?php echo $business['address']; ?></td>
-                            <td><?php echo $business['phone']; ?></td>
-                            <td><?php echo $business['email']; ?></td>
-                            <td><img src="<?php echo base_url('public/logo/' . $business['l_img_name']); ?>" alt="Business Logo" style="width: 50px; height: 50px;"></td>
-                            <td>
-                                <a href="<?php echo base_url('view_business_details/' . md5($business['id'])); ?>" class="btn btn-primary">View Details</a>
+                        <?php foreach ($business as $businesses) : ?>
+                            <tr>
+                                <td><?php echo $businesses['name']; ?></td>
+                                <td><?php echo $businesses['address']; ?></td>
+                                <td><?php echo $businesses['phone']; ?></td>
+                                <td><?php echo $businesses['email']; ?></td>
+                                <td><img src="<?php echo base_url('public/logo/' . $businesses['l_img_name']); ?>" alt="Business Logo" style="width: 50px; height: 50px;"></td>
+                                <td>
+                                    <a href="<?php echo base_url('view_business_details/' . md5($businesses['id']));
+                                                ?>" class="btn btn-primary">View Details</a>
 
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                        <?php
+                        endforeach; ?>
                     </tbody>
                 </table>
             </div>

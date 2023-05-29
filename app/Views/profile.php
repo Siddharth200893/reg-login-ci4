@@ -167,7 +167,7 @@ $picturePath = base_url('public/uploads/' . $picturename);
         <div class="col-12">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="<?php echo base_url('/add-business'); ?>">Add Business</a>
+                    <a class="navbar-brand" href="<?php echo base_url('/business-form'); ?>">Add Business</a>
                     <a class="navbar-brand" href="<?php echo base_url('/view-business/' . md5($id)); ?>">View Business</a>
                     <div class="d-flex">
                         <ul class="navbar-nav">

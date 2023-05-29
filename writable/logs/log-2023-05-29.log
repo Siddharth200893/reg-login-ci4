@@ -1,0 +1,300 @@
+CRITICAL - 2023-05-29 06:28:07 --> Undefined variable $business
+in APPPATH\Views\view_business_details.php on line 45.
+ 1 APPPATH\Views\view_business_details.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $business', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business_details.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business_details.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business_details', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(100): view('view_business_details')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 07:15:13 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\BusinessController.php(115): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 07:22:38 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\BusinessController.php(115): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 07:27:54 --> Undefined variable $updategalleryData
+in APPPATH\Controllers\BusinessController.php on line 138.
+ 1 APPPATH\Controllers\BusinessController.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $updategalleryData', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 138)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 07:39:00 --> Undefined variable $updategalleryData
+in APPPATH\Controllers\BusinessController.php on line 139.
+ 1 APPPATH\Controllers\BusinessController.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $updategalleryData', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 07:45:42 --> Undefined variable $updategalleryData
+in APPPATH\Controllers\BusinessController.php on line 141.
+ 1 APPPATH\Controllers\BusinessController.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $updategalleryData', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 141)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 07:46:16 --> Undefined variable $updategalleryData
+in APPPATH\Controllers\BusinessController.php on line 144.
+ 1 APPPATH\Controllers\BusinessController.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $updategalleryData', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 144)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 07:46:35 --> Undefined variable $updategalleryData
+in APPPATH\Controllers\BusinessController.php on line 144.
+ 1 APPPATH\Controllers\BusinessController.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $updategalleryData', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 144)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:39:05 --> Trying to access array offset on value of type null
+in APPPATH\Views\view_business.php on line 32.
+ 1 APPPATH\Views\view_business.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(77): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->business_list('28c8edde3d61a0411511d3b1866f0636')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:39:55 --> unlink(C:\xampp\htdocs\reg-login\writable\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory
+in APPPATH\Controllers\BusinessController.php on line 131.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 131)
+ 2 APPPATH\Controllers\BusinessController.php(131): unlink('C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:45:25 --> unlink(C:\xampp\htdocs\reg-login\writable\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory
+in APPPATH\Controllers\BusinessController.php on line 131.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 131)
+ 2 APPPATH\Controllers\BusinessController.php(131): unlink('C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:48:37 --> unlink(C:\xampp\htdocs\reg-login\writable\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory
+in APPPATH\Controllers\BusinessController.php on line 133.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 133)
+ 2 APPPATH\Controllers\BusinessController.php(133): unlink('C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 08:53:05 --> unlink(C:\xampp\htdocs\reg-login\writable\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory
+in APPPATH\Controllers\BusinessController.php on line 133.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png): No such file or directory', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 133)
+ 2 APPPATH\Controllers\BusinessController.php(133): unlink('C:\\xampp\\htdocs\\reg-login\\writable\\../public/gallery/jpg-files-591e000b5f9b58f4c0912446.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->update_business('c4ca4238a0b923820dcc509a6f75849b')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:33:06 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(66): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:37:29 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(65): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:38:57 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(66): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:41:46 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(66): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:43:02 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(65): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:44:48 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(65): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:45:54 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(65): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:49:19 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(66): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:52:00 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(67): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 10:52:37 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(67): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 11:22:45 --> Trying to access array offset on value of type null
+in APPPATH\Views\view_business.php on line 32.
+ 1 APPPATH\Views\view_business.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(79): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->business_list('c4ca4238a0b923820dcc509a6f75849b')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 11:52:41 --> Undefined array key "id"
+in APPPATH\Views\view_business.php on line 38.
+ 1 APPPATH\Views\view_business.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 38)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(67): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:00:26 --> Undefined array key "name"
+in APPPATH\Views\view_business.php on line 34.
+ 1 APPPATH\Views\view_business.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(79): view('view_business', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->business_list('c4ca4238a0b923820dcc509a6f75849b')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:10:13 --> Cannot access offset of type string on string
+in APPPATH\Views\view_business.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 4 APPPATH\Controllers\BusinessController.php(67): view('view_business', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:12:51 --> Undefined variable $business
+in APPPATH\Views\view_business.php on line 33.
+ 1 APPPATH\Views\view_business.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $business', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(67): view('view_business')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:16:11 --> Undefined variable $business
+in APPPATH\Views\view_business.php on line 33.
+ 1 APPPATH\Views\view_business.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $business', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(67): view('view_business')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:18:15 --> Undefined variable $business
+in APPPATH\Views\view_business.php on line 33.
+ 1 APPPATH\Views\view_business.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $business', 'C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\reg-login\\app\\Views\\view_business.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('view_business', [], true)
+ 5 APPPATH\Controllers\BusinessController.php(67): view('view_business')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-29 12:21:49 --> Undefined variable $model
+in APPPATH\Controllers\BusinessController.php on line 69.
+ 1 APPPATH\Controllers\BusinessController.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'C:\\xampp\\htdocs\\reg-login\\app\\Controllers\\BusinessController.php', 69)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BusinessController->add_business()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BusinessController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

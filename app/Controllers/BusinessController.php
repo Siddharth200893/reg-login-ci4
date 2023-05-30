@@ -6,6 +6,8 @@ use CodeIgniter\Controller;
 use App\Models\BusinessModel;
 use CodeIgniter\I18n\Time;
 
+
+
 class BusinessController extends Controller
 {
     public function business_form()
@@ -32,6 +34,9 @@ class BusinessController extends Controller
         ];
 
         if ($this->validate($rules)) {
+
+
+
             $businessModel = new BusinessModel();
             $img = $this->request->getFile('logo');
             $img->move(WRITEPATH . '../public/logo');
@@ -66,14 +71,10 @@ class BusinessController extends Controller
             $businessModel->insert($businessData);
 
 
-            $data['business'] = $businessModel->where('user_id', $id)->orderBy("created_at", "desc")->findAll();
-            return view('view_business', $data);
 
-
-
-            // $msg = 'Data has been successfully uploaded';
-            // return view('view_business', ['business' => $businessData, 'msg' => $msg]);
-            //return redirect()->to(base_url('/add-business'))->with('msg', $msg);
+            $msg = 'You have added the business successfully.';
+            session()->setFlashdata('msg', $msg);
+            return view('add_business');
         }
     }
 
@@ -106,81 +107,104 @@ class BusinessController extends Controller
         return view('edit_business_details', $data);
     }
 
-    public function update_business($id)
+
+    public function update_business()
     {
-        //$session = session();
         $myTime = new Time('now');
         helper(['form']);
-        $updatemodel = new BusinessModel();
-        $business = $updatemodel->where('md5(id)', $id)->first();
-        //$id = $this->request->getVar('id');
+        $model = new BusinessModel();
+        $id = $this->request->getVar('id');
+        $business = $model->where('id', $id)->first();
 
-        // print_r($id);
-        // die();
+
+        $logo = $this->request->getFile('logo');
+
+        // Check if a new logo was uploaded
+        if ($logo->isValid()) {
+            // Generate a unique name for the logo file
+            $newLogoName = $logo->getRandomName();
+
+            // Move the uploaded logo file to the desired directory
+            $logo->move('./public/logo', $newLogoName);
+
+            // Update the logo file name in the database
+            $updatedata['l_img_name'] = $newLogoName;
+
+            // Remove the old logo file from the server
+            if ($business['l_img_name']) {
+                $oldLogoPath = './public/logo/' . $business['l_img_name'];
+                if (file_exists($oldLogoPath)) {
+                    unlink($oldLogoPath);
+                }
+            }
+        }
+
+        $model->update($id, $updatedata);
+
         $updatedata = [
             'name' => $this->request->getVar('name'),
             'email' => $this->request->getVar('email'),
             'phone' => $this->request->getVar('phone'),
-            'file_name' => $this->request->getVar('file_name'),
             'modified_at' => $myTime,
         ];
-        // print_r($data);
-        // die();
-        $updatemodel->update($id, $updatedata);
 
+        $model->update($id, $updatedata);
 
         $removeGalleryImages = $this->request->getPost('remove_gallery_images');
-
-        // print_r($removeGalleryImages);
-        // die();
-
         if ($removeGalleryImages) {
-            //$removedImages = json_decode($business['g_img_name'], true);
+            $removedImages = json_decode($business['g_img_name'], true);
+
             foreach ($removeGalleryImages as $image) {
-
-
                 // Remove the image from the server
-                $path =   unlink(WRITEPATH . '../public/gallery/' . $image);
-                print_r($path);
-                die();
-                // Remove the image from the removed images array
-                // $removedImages = array_filter($removedImages, function ($img) use ($image) {
-                //     return $img['g_img_name'] !== $image;
-                // });
+                $filePath = WRITEPATH . '../public/gallery/' . $image;
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+
+                // Remove the image name from the removed images array
+                $removedImages = array_filter($removedImages, function ($img) use ($image) {
+                    return $img['g_img_name'] !== $image;
+                });
             }
 
             // Update the gallery images data without the removed images
-            //$updategalleryData['g_img_name'] = json_encode($removedImages);
+            $updategallerydata['g_img_name'] = json_encode(array_values($removedImages));
+        } else {
+            // If no images are removed, keep the existing gallery images data
+            $updategallerydata['g_img_name'] = $business['g_img_name'];
         }
 
+        // Handle the new gallery images
+        $newGalleryImages = $this->request->getFiles()['gallery_images'];
+        if ($newGalleryImages) {
+            $uploadedImages = [];
+            foreach ($newGalleryImages as $file) {
+                if ($file->isValid() && !$file->hasMoved()) {
+                    $newImageName = $file->getRandomName();
+                    $file->move(WRITEPATH . '../public/gallery/', $newImageName);
+                    $uploadedImages[] = [
+                        'g_img_name' => $newImageName,
+                    ];
+                }
+            }
 
-        //$updatemodel->update($id, $updategalleryData);
+            // Merge the new uploaded images with the existing gallery images
+            $galleryImages = json_decode($updategallerydata['g_img_name'], true);
+            $galleryImages = array_merge($galleryImages, $uploadedImages);
 
+            // Update the gallery images data with the merged images
+            $updategallerydata['g_img_name'] = json_encode($galleryImages);
+        }
 
-        // }
+        // If all images are removed, set the g_img_name field to NULL
+        if (empty($removedImages)) {
+            $updatedata['g_img_name'] = null;
+        }
 
-
-
-
-        // $picture = $this->request->getFile('file_name');
-        // if ($picture->isValid() && !$picture->hasMoved()) {
-        //     $newName = $picture->getRandomName();
-        //     $picture->move(ROOTPATH . 'public/uploads', $newName);
-        //     $userDetailsModel = new UserDetailsModel();
-        //     $userDetailsModel->update($id, ['file_name' => $newName]);
-        // }
-
-        // $updatemodel->update($id, $updatedata);
-        //below join used for only file name
-        // $userdetails = $updatemodel->select('user_registration.id as registrationid, user_registration.name as name, user_registration.email as email, user_registration.phone as phone, user_details.file_name as filename')
-        //     ->join('user_details', 'user_details.id = user_registration.id')
-        //     ->where('user_registration.id', $id)
-        //     ->first();
-
-        // $data['userdetails'] = $userdetails;
+        $model->update($id, $updatedata);
+        $model->update($id, $updategallerydata);
 
         $msg = 'Business details have been updated successfully.';
         return redirect()->to(base_url('view-business/' . md5($id)))->with('msg', $msg);
-        //return view('view_business_details');
     }
 }

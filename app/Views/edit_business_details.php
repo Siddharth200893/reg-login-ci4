@@ -20,11 +20,11 @@
         <div class="row justify-content-md-center">
             <div class="col-5">
                 <h2>Edit Business Details</h2>
-                <form action="<?php echo base_url('/update-business/' . md5($business['id'])); ?>" enctype="multipart/form-data" method="post">
+                <form action="<?php echo base_url('/update-business'); ?>" enctype="multipart/form-data" method="post">
 
 
 
-                    <input type="hidden" name="id" placeholder="" value="<?php echo $business['name']; ?>" class="form-control">
+                    <input type="hidden" name="id" placeholder="" value="<?php echo $business['id']; ?>" class="form-control">
 
                     <div class="form-group mb-3">
                         <label for="name">Name</label>
@@ -59,7 +59,9 @@
                                     <div class="col-md-3">
                                         <img src="<?php echo base_url('public/gallery/' . $image['g_img_name']); ?>" alt="Gallery Image" class="img-thumbnail">
                                         <div class="form-check mt-2">
+
                                             <input class="form-check-input" type="checkbox" name="remove_gallery_images[]" value="<?php echo $image['g_img_name']; ?>">
+
                                             <label class="form-check-label" for="remove_gallery_images[]">Remove</label>
                                         </div>
                                     </div>

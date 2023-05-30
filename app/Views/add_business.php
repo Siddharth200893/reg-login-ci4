@@ -29,7 +29,7 @@
                         <?= session('msg') ?>
                     </div>
                 <?php endif ?>
-                <form action="<?php echo base_url(); ?>/BusinessController/add_business" enctype="multipart/form-data" method="post">
+                <form action="<?php echo base_url("BusinessController/add_business"); ?>" enctype="multipart/form-data" method="post">
                     <input type="hidden" name="user_id" placeholder="" value="<?= $id ?>" class="form-control">
 
                     <div class="form-group mb-3">

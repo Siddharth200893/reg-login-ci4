@@ -51,7 +51,7 @@ $routes->post('update-profile', 'SigninController::update_profile');
 $routes->get('view-business/(:alphanum)', 'BusinessController::business_list/$1');
 $routes->get('view_business_details/(:alphanum)', 'BusinessController::view_business_details/$1');
 $routes->get('/edit-business-details/(:alphanum)', 'BusinessController::edit_business_details/$1');
-$routes->post('update-business/(:alphanum)', 'BusinessController::update_business/$1');
+$routes->post('update-business', 'BusinessController::update_business');
 
 /*
  * --------------------------------------------------------------------

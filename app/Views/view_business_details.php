@@ -64,11 +64,11 @@
                         <div class="col-md-3">Gallery Images:</div>
                         <div class="col-md-9">
                             <?php $galleryImages = json_decode($business['g_img_name'], true); ?>
-                            <?php if ($galleryImages) : ?>
+                            <?php if (!empty($galleryImages)) : ?>
                                 <div id="gallery-slider" class="gallery-slider carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <?php foreach ($galleryImages as $index => $image) : ?>
-                                            <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                                            <div class="carousel-item <?php echo ($index === 0) ? 'active' : ''; ?>">
                                                 <img src="<?php echo base_url('public/gallery/' . $image['g_img_name']); ?>" alt="Gallery Image">
                                             </div>
                                         <?php endforeach; ?>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="text-end">
-                        <a href="<?php echo base_url('/edit-business-details/' . md5($business['id'])); ?>" class="btn btn-primary">Edit Business</a>
+                        <a href="<?php echo base_url('edit-business-details/' . md5($business['id'])); ?>" class="btn btn-primary">Edit Business</a>
                     </div>
                 </div>
             </div>
